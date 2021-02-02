@@ -289,7 +289,7 @@ then
 					ARR_COMMAND=( "-d" "{\"raw\":${STRING}}" )
 
 				# command for Pilote2 product (gen 2)
-				elif [ "${PRODUCT}" = "Pilote2" ]
+				elif [ "${PRODUCT}" = "Pilote2" -o "${PRODUCT}" = "Pilote_Soc" ]
 				then
 					STRING=$(echo "${ARR_SET_PILOTE2[@]}" | tr " " "\n" | grep "^${STATE};" | cut -d';' -f2)
 					ARR_COMMAND=( "-d" "{\"attrs\":{\"mode\":\"${STRING}\"}}" )
